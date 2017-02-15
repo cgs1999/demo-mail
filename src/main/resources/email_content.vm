@@ -1,0 +1,143 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>会议管理</title>
+</head>
+<body>
+<table style="border: 1px solid #c6c6c6; padding:0px;" width="602" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align="center">
+			<table width="522" cellspacing="0" cellpadding="0">
+				<tr><td>&nbsp;</td></tr>
+				<tr>
+					<td>
+						<div style="font-family: 微软雅黑; color: #4e4e4e;">会议管理通知</div>
+					</td>
+				</tr>
+				<tr>
+					<td><hr style="height:1px;border:none;border-top:1px solid #cccccc;" /></td>
+				</tr>
+			</table>
+			<table width="522" style="border: 0px; margin: 0px; font-family:微软雅黑;font-size:12px; color: #4e4e4e" cellspacing="0" cellpadding="0">
+				<tr><td>&nbsp;</td></tr>
+				<tr>
+					<td style="padding:0px;">XXX，您好！</td>
+				</tr>
+				<tr><td>&nbsp;</td></tr>
+				<tr>
+					<td>
+						<span style="font-weight: bold">$organizer</span>
+						邀请您参加会议，详情如下：
+					</td>
+				</tr>
+				<tr><td>&nbsp;</td></tr>
+			</table>
+			<table width="497" style="border-top: 1px solid #c6c6c6; border-right: 0px; border-bottom: 1px solid #c6c6c6; border-left: 0px; margin: 0px" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+						<table width="100%" style="font-family:微软雅黑;font-size:12px; color: #4e4e4e" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td width="23">
+									<div style="padding: 0px 2px 0px 3px; width: 18px; height: 16px"></div>
+								</td>
+								<td width="474" colspan="2">
+									<div style="height: 16px; font-family:微软雅黑;font-size:14px;font-weight: bold; color: #000">$subject</div>
+								</td>
+							</tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr>
+								<td width="23"></td>
+								<td width="80">会议时间：</td>
+								<td width="414"><div>$startTime - $endTime</div></td>
+							</tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr>
+								<td width="23"></td>
+								<td width="80">会&nbsp;议&nbsp;室&nbsp;：</td>
+								<td width="414"><div style="word-wrap:break-word;word-break:break-all;">$location</div></td>
+							</tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr>
+								<td width="23"></td>
+								<td width="80">参&nbsp;会&nbsp;人&nbsp;：</td>
+								<td width="414"><div style="word-wrap:break-word;word-break:break-all;">$requiredParticipants</div></td>
+							</tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr>
+								<td width="23"></td>
+								<td width="80">列&nbsp;席&nbsp;人&nbsp;：</td>
+								<td width="414"><div style="word-wrap:break-word;word-break:break-all;">$optionalParticipants</div></td>
+							</tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr>
+								<td width="23"></td>
+								<td width="80">会议概要：</td>
+								<td width="414"><div style="word-wrap:break-word;word-break:break-all;">$content</div></td>
+							</tr>
+							 <tr>
+								<td>&nbsp;</td>
+							</tr>
+							 <tr>
+								<td>&nbsp;</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<table width="497" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td bgColor="#eff2f4" style="border: 1px solid #dcdfe1;text-align: center" width="80" height="25">
+						<a href="http://weibo.kedacom.com/meeting/meetingFeedback/confirmParticipantType?meetingId=5521660&amp;isParticipant=1&amp;participantor=f348cdd9-2207-4054-aab5-3ea767fce937&amp;participanteType=1&amp;lastModifyTime=2016-11-14 10:30:50" target="_blank" style="text-decoration: none; font-family:微软雅黑;font-size:12px; color: #5f5f5f;">参加</a>
+					</td>
+					<td width="1">&nbsp;</td>
+					<td bgColor="#eff2f4" style="border: 1px solid #dcdfe1;text-align: center" width="80">
+						<a href="http://weibo.kedacom.com/meeting/meetingFeedback/feedbacknotparticipation?meetingId=5521660&amp;isParticipant=0&amp;participantor=f348cdd9-2207-4054-aab5-3ea767fce937&amp;lastModifyTime=2016-11-14 10:30:50&amp;reasonId=1" target="_blank" style="text-decoration: none; font-family:微软雅黑;font-size:12px; color: #5f5f5f;">不参加</a>
+					</td>
+					<td width="380" style="border: 0px solid #dcdfe1;"></td>
+				</tr>
+			</table>
+			<table width="497" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="26" align="left"><img src="http://weibo.kedacom.com/meeting/static/app/meeting/images/email-arrow.jpg" style="width: 26px; height: 26px" /></td>
+					<td width="182" align="left"><a style="font-family:微软雅黑;font-size:12px; color: #007ac0; padding: 7px 0px 7px 11px; height: 26px" href="http://weibo.kedacom.com/meeting" target="_blank">登录会议管理系统</a></td>
+					<td width="26" align="left"><img src="http://weibo.kedacom.com/meeting/static/app/meeting/images/email-arrow.jpg" style="width: 26px; height: 26px" /></td>
+					<td width="182" align="left"><a style="font-family:微软雅黑;font-size:12px; color: #007ac0; padding: 7px 0px 7px 11px; height: 26px" href="http://www.movision.com.cn/about/?8.html" target="_blank">安装视频会议终端</a></td>
+					<td width="81" align="left"></td>
+				</tr>
+			</table>
+			<div>&nbsp;</div>			 
+			<table width="497" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td valign="top">
+						<div style="font-family:微软雅黑;font-size:12px; color: #8c8c8c; word-wrap:break-word; word-break:break-all">
+							使用 SKY for Windows 或其它终端请加入“<span style="color: #007ac0">$subject</span>”会议室
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td valign="top">&nbsp;</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
