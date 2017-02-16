@@ -108,10 +108,11 @@
 				</tr>
 				<tr>
 					<td width="26" align="left"><img src="http://weibo.kedacom.com/meeting/static/app/meeting/images/email-arrow.jpg" style="width: 26px; height: 26px" /></td>
-					<td width="182" align="left"><a style="font-family:微软雅黑;font-size:12px; color: #007ac0; padding: 7px 0px 7px 11px; height: 26px" href="http://weibo.kedacom.com/meeting" target="_blank">登录会议管理系统</a></td>
+					<td width="150" align="left"><a style="font-family:微软雅黑;font-size:12px; color: #007ac0; padding: 7px 0px 7px 11px; height: 26px" href="http://weibo.kedacom.com/meeting" target="_blank">登录会议管理系统</a></td>
 					<td width="26" align="left"><img src="http://weibo.kedacom.com/meeting/static/app/meeting/images/email-arrow.jpg" style="width: 26px; height: 26px" /></td>
-					<td width="182" align="left"><a style="font-family:微软雅黑;font-size:12px; color: #007ac0; padding: 7px 0px 7px 11px; height: 26px" href="http://www.movision.com.cn/about/?8.html" target="_blank">安装视频会议终端</a></td>
-					<td width="81" align="left"></td>
+					<td width="150" align="left"><a style="font-family:微软雅黑;font-size:12px; color: #007ac0; padding: 7px 0px 7px 11px; height: 26px" href="http://172.16.80.125:8080/email/addToCalendar" target="_blank">添加到我的日历</a></td>
+					<td width="26" align="left"><img src="http://weibo.kedacom.com/meeting/static/app/meeting/images/email-arrow.jpg" style="width: 26px; height: 26px" /></td>
+					<td width="150" align="left"><a style="font-family:微软雅黑;font-size:12px; color: #007ac0; padding: 7px 0px 7px 11px; height: 26px" href="http://www.movision.com.cn/about/?8.html" target="_blank">安装视频会议终端</a></td>
 				</tr>
 			</table>
 			<div>&nbsp;</div>			 
