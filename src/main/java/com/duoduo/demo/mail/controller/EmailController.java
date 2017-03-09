@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.duoduo.demo.mail.service.EmailHtmlSender;
 import com.duoduo.demo.mail.service.EmailLocalSender;
 import com.duoduo.demo.mail.service.EmailSender;
+import com.duoduo.demo.mail.service.EventMailSender;
 
 @Controller
 @RequestMapping("/email")
@@ -37,6 +38,9 @@ public class EmailController {
 
 	@Autowired
 	private EmailHtmlSender emailHtmlSender;
+
+	@Autowired
+	private EventMailSender eventMailSender;
 
 	@RequestMapping(value = {
 			"", "/index"
@@ -72,20 +76,24 @@ public class EmailController {
 	@RequestMapping(value = "/sendEmail", method = RequestMethod.POST)
 	public String sendEmail(HttpServletRequest request) {
 		// 组织者
-		Pair<String, String> organizer = Pair.of("admin@duoduo.com", "管理员");
+		Pair<String, String> organizer = Pair.of("kdvp@kedacom.com", "致友小秘书");
 		// 必须出席人员
 		List<Pair<String, String>> requiredParticipants = new ArrayList<Pair<String, String>>(0);
-		Pair<String, String> pair = Pair.of("zhangsan@duoduo.com", "张三");
+		Pair<String, String> pair = Pair.of("chengesheng@kedacom.com", "陈格生");
 		requiredParticipants.add(pair);
-		pair = Pair.of("lisi@duoduo.com", "李四");
+		pair = Pair.of("jiangruihuan@kedacom.com", "蒋瑞欢");
+		requiredParticipants.add(pair);
+		// pair = Pair.of("huangchunhua@kedacom.com", "黄春华");
+		// requiredParticipants.add(pair);
+		pair = Pair.of("jjjrh123@163.com", "蒋瑞欢163");
 		requiredParticipants.add(pair);
 		// 可选出席人员
 		List<Pair<String, String>> optionalParticipants = new ArrayList<Pair<String, String>>(0);
-		pair = Pair.of("wangwu@duoduo.com", "王五");
-		optionalParticipants.add(pair);
+		// pair = Pair.of("fankaijian@kedacom.com", "范凯健");
+		// optionalParticipants.add(pair);
 
 		try {
-			emailSender.sendEventEmailWithoutICal4j("【测试邮件请忽略】Outlook公司邮件测试", "20170223T080000Z", "20170223T100000Z",
+			emailSender.sendEventEmailWithoutICal4j("【测试邮件请忽略】Outlook公司邮件测试", "20170228T080000Z", "20170228T100000Z",
 					"视讯4F-会议室2", "【测试邮件请忽略】邮件内容", organizer, requiredParticipants, optionalParticipants);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -149,6 +157,36 @@ public class EmailController {
 		return "result";
 	}
 
+	@RequestMapping(value = "/sendEventMail", method = RequestMethod.POST)
+	public String sendEventMail(HttpServletRequest request, Boolean isHtml) {
+		// 组织者
+		Pair<String, String> organizer = Pair.of("kdvp@kedacom.com", "致友小秘书");
+		// 必须出席人员
+		List<Pair<String, String>> requiredParticipants = new ArrayList<Pair<String, String>>(0);
+		Pair<String, String> pair = Pair.of("chengesheng@kedacom.com", "陈格生");
+		requiredParticipants.add(pair);
+		pair = Pair.of("jiangruihuan@kedacom.com", "蒋瑞欢");
+		requiredParticipants.add(pair);
+		// pair = Pair.of("huangchunhua@kedacom.com", "黄春华");
+		// requiredParticipants.add(pair);
+		pair = Pair.of("jjjrh123@163.com", "蒋瑞欢163");
+		requiredParticipants.add(pair);
+		// 可选出席人员
+		List<Pair<String, String>> optionalParticipants = new ArrayList<Pair<String, String>>(0);
+		// pair = Pair.of("fankaijian@kedacom.com", "范凯健");
+		// optionalParticipants.add(pair);
+
+		try {
+			isHtml = (isHtml == null) ? false : isHtml;
+			eventMailSender.sendEventEmailWithoutICal4j("【测试邮件请忽略】会议通知HTML邮件测试", "20170223T080000Z", "20170223T100000Z",
+					"视讯4F-会议室2", "【测试邮件请忽略】邮件内容", organizer, requiredParticipants, optionalParticipants, isHtml);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return "result";
+	}
+
 	@RequestMapping(value = "/addToCalendar", method = RequestMethod.GET)
 	public void addToCalendar(HttpServletResponse response) {
 		try {// 组织者
@@ -181,7 +219,7 @@ public class EmailController {
 			// 设置response的Header
 			response.setContentType("application/x-msdownload;charset=UTF-8");
 			response.addHeader("Content-Disposition",
-					"attachment;filename=" + URLEncoder.encode(subject + ".ics", "UTF-8"));
+					"attachment;filename=" + URLEncoder.encode("addToCalendar.ics", "UTF-8"));
 			response.addHeader("Content-Length", "" + buffer.length);
 			OutputStream toClient = new BufferedOutputStream(response.getOutputStream());
 			toClient.write(buffer);
@@ -223,7 +261,7 @@ public class EmailController {
 			// 设置response的Header
 			response.setContentType("application/x-msdownload;charset=UTF-8");
 			response.addHeader("Content-Disposition",
-					"attachment;filename=" + URLEncoder.encode(subject + ".ics", "UTF-8"));
+					"attachment;filename=" + URLEncoder.encode("addToCalendar.ics", "UTF-8"));
 			response.addHeader("Content-Length", "" + buffer.length);
 			OutputStream toClient = new BufferedOutputStream(response.getOutputStream());
 			toClient.write(buffer);

@@ -154,7 +154,7 @@ public class EmailSender {
 			buffer.append("CREATED:20170109T080653Z\n"); // TODO
 			buffer.append("DTEND;TZID=\"China Standard Time\":" + startTime + "\n");
 			buffer.append("DTSTAMP:20170109T080653Z\n");
-			buffer.append("DTSTART;TZID=\"China Standard Time\":" + endTime + "\n");
+			buffer.append("DTSTART;TZID=\"China Standard Time\":" + startTime + "\n");
 			buffer.append("LAST-MODIFIED:20170109T080653Z\n"); // TODO
 			buffer.append("LOCATION:" + location + "\n");
 			buffer.append("ORGANIZER;CN=\"" + organizer.getKey() + "\":MAILTO:" + organizer.getValue() + "\n");
